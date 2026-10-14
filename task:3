@@ -1,0 +1,108 @@
+
+import Foundation
+
+// ==========================================
+// TASK 1: RESTAURANT BILL CALCULATOR
+// ==========================================
+
+print("===== TASK 1: RESTAURANT BILL =====")
+
+let itemPrice = 450.0
+let quantity = 3
+
+// Calculate subtotal
+let subtotal = itemPrice * Double(quantity)
+
+// Coupon availability
+let hasCoupon = true
+
+// Calculate discount using ternary operator
+let discount = (hasCoupon && subtotal > 1000)
+    ? subtotal * 0.10
+    : 0.0
+
+// Calculate GST and total
+let discountedAmount = subtotal - discount
+let gst = discountedAmount * 0.18
+let total = discountedAmount + gst
+
+// Split bill among 4 people
+let perPerson = total / 4.0
+
+print("Item Price: ₹\(itemPrice)")
+print("Quantity: \(quantity)")
+print("Subtotal: ₹\(subtotal)")
+print("Discount: ₹\(discount)")
+print("GST: ₹\(gst)")
+print("Total Bill: ₹\(total)")
+print("Each Person Pays: ₹\(perPerson)")
+
+// Integer division and remainder
+let amount = 1234
+let hundreds = amount / 100
+let remainder = amount % 100
+
+print("Hundreds: \(hundreds)")
+print("Remainder: \(remainder)")
+
+
+// ==========================================
+// TASK 2: LEAP YEAR AND RANGE CHECKS
+// ==========================================
+
+print("\n===== TASK 2: LEAP YEAR AND RANGE =====")
+
+// Leap year expressions without if statements
+let leap1900 = (1900 % 4 == 0 && 1900 % 100 != 0)
+    || (1900 % 400 == 0)
+
+let leap2000 = (2000 % 4 == 0 && 2000 % 100 != 0)
+    || (2000 % 400 == 0)
+
+let leap2024 = (2024 % 4 == 0 && 2024 % 100 != 0)
+    || (2024 % 400 == 0)
+
+let leap2026 = (2026 % 4 == 0 && 2026 % 100 != 0)
+    || (2026 % 400 == 0)
+
+print("1900 is leap year: \(leap1900)")
+print("2000 is leap year: \(leap2000)")
+print("2024 is leap year: \(leap2024)")
+print("2026 is leap year: \(leap2026)")
+
+// Check whether a number is between 1 and 100
+let number = 50
+let isInRange = (1...100).contains(number)
+
+print("Number is in range: \(isInRange)")
+
+// Check even and not a multiple of 10
+let n = 24
+let isEvenNotMultipleOf10 = (n % 2 == 0) && (n % 10 != 0)
+
+print("Even and not multiple of 10: \(isEvenNotMultipleOf10)")
+
+// Nil-coalescing operator
+let nickname: String? = nil
+let displayName = nickname ?? "Guest"
+
+print("Nickname: \(displayName)")
+
+
+// ==========================================
+// TASK 3: PREDICT THE OUTPUT
+// ==========================================
+
+print("\n===== TASK 3: PREDICT THE OUTPUT =====")
+
+print(7 / 2)
+print(7 % 2)
+print(-7 % 3)
+print(7.0 / 2)
+print(10 - 2 * 3 + 4 / 2)
+print(5 > 3 && 2 > 4 || true)
+print(1 << 3)
+print(6 & 3, 6 | 3, 6 ^ 3)
+
+let x: UInt8 = 255
+print(x &+ 1)
