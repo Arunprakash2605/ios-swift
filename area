@@ -1,0 +1,37 @@
+
+import Foundation
+
+struct Counter {
+    var value = 0
+
+    mutating func increment() {
+        value += 1
+    }
+}
+
+class Box {
+    var value = 0
+
+    func increment() {
+        value += 1
+    }
+}
+
+// Struct: use var because increment changes its value
+var c = Counter()
+c.increment()
+
+print("Counter value:", c.value)
+
+// Class: let is allowed because the object is mutable
+let b = Box()
+b.increment()
+
+print("Box value:", b.value)
+
+// Two constants referencing the same object
+let b1 = b
+let b2 = b1
+
+print("Same object:", b1 === b2)
+ 
