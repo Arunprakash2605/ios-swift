@@ -1,0 +1,97 @@
+TASK:4
+
+TASK:1
+
+import Foundation
+
+// 1. Array: ordered subjects
+var subjects = ["Swift", "UIKit", "SwiftUI"]
+
+subjects.append("Networking")
+subjects.insert("Testing", at: 1)
+
+if let index = subjects.firstIndex(of: "UIKit") {
+    subjects.remove(at: index)
+}
+
+print("Sorted Subjects:", subjects.sorted())
+
+// 2. Set: unique student names
+var registered: Set<String> = ["Anu", "Ben", "Chitra"]
+
+registered.insert("Dev")
+registered.insert("Anu") // Duplicate ignored
+
+print("Registered Students:", registered.sorted())
+print("Registration Count:", registered.count)
+
+// 3. Dictionary: student marks
+var marks: [String: Int] = [
+    "Anu": 85,
+    "Ben": 78,
+    "Chitra": 92
+]
+
+// Add a student
+marks["Dev"] = 88
+
+// Update a student's mark
+marks["Ben"] = 82
+
+// Read a missing student's mark
+let unknownMark = marks["Esha"]
+print("Esha's Mark:", unknownMark as Any)
+
+// 4. Print marks in alphabetical order
+for name in marks.keys.sorted() {
+    if let mark = marks[name] {
+        print("\(name): \(mark)")
+    }
+}
+
+// 5. Find highest mark
+if let highest = marks.max(by: { $0.value < $1.value }) {
+    print("Highest Mark:", highest.value)
+    print("Top Student:", highest.key)
+}
+
+
+
+TASK:2
+
+
+# Task 2: Word Frequency Counter
+
+sentence = "swift is fun and swift is fast"
+
+# (a) Count total words
+words = sentence.split()
+print("Total Words:", len(words))
+
+# (b) Find unique words
+unique_words = set(words)
+print("Unique Words:", sorted(unique_words))
+
+# (c) Count each word's frequency
+frequency = {}
+
+for word in words:
+    frequency[word] = frequency.get(word, 0) + 1
+
+print("Word Frequencies:")
+
+for word in sorted(frequency):
+    print(f"{word}: {frequency[word]}")
+
+# (d) Rank by frequency, ties alphabetically
+ranked_words = sorted(
+    frequency.items(),
+    key=lambda item: (-item[1], item[0])
+)
+
+print("Ranked Words:")
+
+for word, count in ranked_words:
+    print(f"{word}: {count}")
+
+
