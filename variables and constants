@@ -1,0 +1,13 @@
+import Foundation
+
+var studentName = "Arun"
+var age = 21
+
+let collegeName = "Karpagam Institute of Technology"
+
+studentName = "Prakash"
+age = 22
+
+print(studentName)
+print(age)
+print(collegeName)
