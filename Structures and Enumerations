@@ -1,0 +1,13 @@
+struct Student {
+    var name: String
+    var age: Int
+
+    func displayDetails() {
+        print(name)
+        print(age)
+    }
+}
+
+let student1 = Student(name: "Arun", age: 21)
+
+student1.displayDetails()
