@@ -1,0 +1,21 @@
+var numbers: [Int] = []
+
+for i in 1...5 {
+    print("Enter number \(i):")
+
+    let input = Int(readLine()!)!
+
+    numbers.append(input)
+}
+
+
+var largest = numbers[0]
+
+for number in numbers {
+    if number > largest {
+        largest = number
+    }
+}
+
+print("Array:", numbers)
+print("Largest number:", largest)
