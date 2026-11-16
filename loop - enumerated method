@@ -1,0 +1,5 @@
+let names = ["arun", "prakash", "anand"]
+for (index, name) in names.enumerated()
+{
+    print(index,name)
+}
