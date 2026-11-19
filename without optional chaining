@@ -1,0 +1,9 @@
+class Person {
+    var name: String = "Arun"
+}
+
+var person: Person? = Person()
+
+if let actualPerson = person {
+    print(actualPerson.name)
+}
