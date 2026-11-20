@@ -1,0 +1,15 @@
+import Foundation
+
+let queue = DispatchQueue(label: "my.serial.queue")
+
+queue.async {
+    print("Task 1")
+}
+
+queue.async {
+    print("Task 2")
+}
+
+queue.async {
+    print("Task 3")
+}
