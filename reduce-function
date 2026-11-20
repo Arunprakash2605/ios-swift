@@ -1,0 +1,7 @@
+let numbers = [10, 20, 30, 40]
+
+let total = numbers.reduce(0) { result, number in
+    return result + number
+}
+
+print(total)
