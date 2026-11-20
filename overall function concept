@@ -1,0 +1,17 @@
+func findLargest(_ a: Int, _ b: Int) -> Int {
+    if a > b {
+        return a
+    } else {
+        return b
+    }
+}
+
+print("Enter first number:")
+let num1 = Int(readLine()!)!
+
+print("Enter second number:")
+let num2 = Int(readLine()!)!
+
+let result = findLargest(num1, num2)
+
+print("Largest number is: \(result)")
