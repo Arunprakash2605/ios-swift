@@ -1,0 +1,5 @@
+let values = ["10", "20", "Hello", "30", "Swift"]
+
+let numbers = values.compactMap { Int($0) }
+
+print(numbers)
