@@ -1,0 +1,30 @@
+import Foundation
+
+let group = DispatchGroup()
+
+let queue = DispatchQueue.global()
+
+group.enter()
+
+queue.async {
+    print("Image 1 downloaded")
+    group.leave()
+}
+
+group.enter()
+
+queue.async {
+    print("Image 2 downloaded")
+    group.leave()
+}
+
+group.enter()
+
+queue.async {
+    print("Image 3 downloaded")
+    group.leave()
+}
+
+group.notify(queue: .main) {
+    print("All images downloaded")
+}
