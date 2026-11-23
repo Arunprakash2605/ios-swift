@@ -1,0 +1,17 @@
+import Foundation
+
+let operationQueue = OperationQueue()
+
+operationQueue.maxConcurrentOperationCount = 2
+
+operationQueue.addOperation {
+    print("Task 1")
+}
+
+operationQueue.addOperation {
+    print("Task 2")
+}
+
+operationQueue.addOperation {
+    print("Task 3")
+}
