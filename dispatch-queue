@@ -1,0 +1,11 @@
+import Foundation
+
+print("Start")
+
+DispatchQueue.main.asyncAfter(
+    deadline: .now() + 3
+) {
+    print("Executed after 3 seconds")
+}
+
+print("End")
