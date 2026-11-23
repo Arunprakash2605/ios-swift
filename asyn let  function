@@ -1,0 +1,22 @@
+func getUser() async -> String {
+    return "User details"
+}
+
+func getPosts() async -> String {
+    return "Post details"
+}
+
+func loadData() async {
+    async let user = getUser()
+    async let posts = getPosts()
+
+    let result1 = await user
+    let result2 = await posts
+
+    print(result1)
+    print(result2)
+}
+
+Task {
+    await loadData()
+}
