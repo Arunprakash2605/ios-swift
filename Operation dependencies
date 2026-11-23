@@ -1,0 +1,16 @@
+let task1 = BlockOperation {
+    print("Task 1")
+}
+
+let task2 = BlockOperation {
+    print("Task 2")
+}
+
+task2.addDependency(task1)
+
+let queue = OperationQueue()
+
+queue.addOperations(
+    [task1, task2],
+    waitUntilFinished: false
+)
