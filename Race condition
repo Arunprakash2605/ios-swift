@@ -1,0 +1,15 @@
+import Foundation
+
+var count = 0
+
+DispatchQueue.global().async {
+    for _ in 1...1000 {
+        count += 1
+    }
+}
+
+DispatchQueue.global().async {
+    for _ in 1...1000 {
+        count += 1
+    }
+}
