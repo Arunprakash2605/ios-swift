@@ -1,0 +1,36 @@
+class BankAccount {
+
+    private var balance = 5000
+
+    func deposit(amount: Int) {
+
+        if amount > 0 {
+            balance += amount
+            print("Amount deposited:", amount)
+        } else {
+            print("Invalid amount")
+        }
+    }
+
+    func withdraw(amount: Int) {
+
+        if amount <= 0 {
+            print("Invalid amount")
+        } else if amount <= balance {
+            balance -= amount
+            print("Withdrawal successful")
+        } else {
+            print("Insufficient balance")
+        }
+    }
+
+    func showBalance() {
+        print("Balance:", balance)
+    }
+}
+
+let account = BankAccount()
+
+account.deposit(amount: 2000)
+account.withdraw(amount: 1000)
+account.showBalance()
