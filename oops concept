@@ -1,0 +1,21 @@
+class Car {
+
+    var brand = "BMW"
+    var color = "Black"
+    var speed = 0
+
+    func start() {
+        print("Car started")
+    }
+
+    func accelerate() {
+        speed += 120
+        print("Current speed:", speed)
+    }
+}
+
+let car1 = Car()
+
+print(car1.brand)
+car1.start()
+car1.accelerate()
