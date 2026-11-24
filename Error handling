@@ -1,0 +1,18 @@
+enum AgeError: Error {
+    case invalidAge
+}
+
+func checkAge(_ age: Int) throws {
+
+    if age < 18 {
+        throw AgeError.invalidAge
+    }
+
+    print("You are eligible")
+}
+
+do {
+    try checkAge(15)
+} catch {
+    print("You are not eligible")
+}
