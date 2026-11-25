@@ -1,0 +1,10 @@
+class Student {
+
+    var name = "Arun"
+    var age = 22
+}
+
+let student = Student()
+
+print(student.name)
+print(student.age)
